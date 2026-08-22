@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips & Bling | Press-on Nails & Jewelry</title>
-    <!-- Google Fonts for Editorial Serif and Script Vibe -->
+    <title>Tips & Bling | Luxury Press-On Nails & Jewelry</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --bg-color: #f7f5f0;
+            --bg-color: #ffffff;
+            --soft-pink: #fdf2f5;
+            --accent-pink: #e08ba8;
+            --dark-pink: #c56e8b;
             --text-color: #1a1a1a;
-            --pink-accent: #f2a9be;
-            --pink-light: #fbe6ec;
-            --border-color: #dcd7cd;
+            --gray-text: #666666;
+            --border-color: #f0eae1;
         }
 
         * {
@@ -26,48 +27,33 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .page-wrapper {
-            width: 100%;
-            max-width: 480px;
-            background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Top Brand Header */
-        .brand-header {
-            text-align: center;
-            padding: 24px 20px 16px;
+            padding: 20px 30px;
             border-bottom: 1px solid var(--border-color);
-            background-color: #ffffff;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .brand-logo {
+        .nav-logo {
             font-family: 'Pinyon Script', cursive;
-            font-size: 2.5rem;
-            color: #d17b96;
+            font-size: 2.2rem;
+            color: var(--dark-pink);
             text-decoration: none;
         }
 
-        /* Navigation Links Bar */
         .nav-links {
             display: flex;
-            justify-content: center;
-            gap: 16px;
-            padding: 10px 15px;
-            background-color: var(--bg-color);
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.75rem;
+            gap: 20px;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
@@ -80,272 +66,350 @@
         }
 
         .nav-links a:hover {
-            color: #d17b96;
+            color: var(--dark-pink);
         }
 
         /* Hero Section */
         .hero {
-            padding: 30px 20px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
             align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--soft-pink);
             border-bottom: 1px solid var(--border-color);
         }
 
-        .hero-img-box {
-            width: 100%;
-            border: 1px solid var(--text-color);
-            padding: 8px;
-            background: #ffffff;
-        }
-
-        .hero-img-box img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .hero-content {
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
+        .hero span.tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--dark-pink);
+            margin-bottom: 10px;
             font-weight: 600;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
             line-height: 1.1;
-            margin-bottom: 12px;
         }
 
-        .hero-content h1 span.script-word {
+        .hero h1 em {
             font-family: 'Pinyon Script', cursive;
-            font-size: 2.8rem;
-            color: #d17b96;
-            display: inline-block;
-            vertical-align: middle;
+            color: var(--dark-pink);
             font-weight: 400;
+            font-size: 3.5rem;
         }
 
-        .hero-content p {
-            font-size: 0.85rem;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            padding: 0 10px;
+        .hero p {
+            font-size: 0.95rem;
+            color: var(--gray-text);
+            max-width: 500px;
+            margin-bottom: 25px;
         }
 
-        .cta-btn {
+        .btn {
             display: inline-block;
-            background-color: var(--pink-accent);
-            color: var(--text-color);
+            background-color: var(--accent-pink);
+            color: #ffffff;
             padding: 12px 28px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border: 1px solid var(--text-color);
-            transition: all 0.3s ease;
+            transition: background 0.2s;
+            border: none;
+            cursor: pointer;
         }
 
-        .cta-btn:hover {
-            background-color: #e591ab;
-            transform: translateY(-2px);
+        .btn:hover {
+            background-color: var(--dark-pink);
         }
 
-        /* Marquee Banner */
-        .pink-banner {
-            background-color: var(--pink-accent);
-            color: var(--text-color);
-            padding: 10px 15px;
+        /* Catalog Section */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-header {
             text-align: center;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            border-top: 1px solid var(--text-color);
-            border-bottom: 1px solid var(--text-color);
+            margin-bottom: 40px;
         }
 
-        /* Categories Section */
-        .categories-section {
-            padding: 30px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .section-title {
+        .section-header h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            font-weight: 600;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
         }
 
-        .cat-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .section-header p {
+            color: var(--gray-text);
+            font-size: 0.9rem;
         }
 
-        .cat-card {
-            text-decoration: none;
-            color: inherit;
-            display: block;
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
             background: #ffffff;
             border: 1px solid var(--border-color);
-            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             transition: transform 0.2s;
         }
 
-        .cat-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--text-color);
+        .product-card:hover {
+            transform: translateY(-4px);
         }
 
-        .cat-card img {
+        .product-img {
             width: 100%;
-            height: 180px;
+            height: 320px;
             object-fit: cover;
+        }
+
+        .product-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .product-details h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+
+        .product-details .price {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark-pink);
+            margin-bottom: 12px;
+        }
+
+        .product-details p {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+            margin-bottom: 15px;
+        }
+
+        /* How to Order Section */
+        .order-section {
+            background-color: var(--soft-pink);
+            padding: 60px 20px;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-card span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--dark-pink);
+            font-weight: 600;
             display: block;
             margin-bottom: 10px;
         }
 
-        .cat-card span {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            font-weight: 600;
+        .step-card h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
-        /* Sub-heading Quote */
-        .quote-section {
-            padding: 25px 20px;
+        .step-card p {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+        }
+
+        /* Payment Section */
+        .payment-box {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: #ffffff;
+            border: 1px dashed var(--dark-pink);
+            padding: 30px;
+            border-radius: 8px;
             text-align: center;
+        }
+
+        .payment-box h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
-            font-style: italic;
-            line-height: 1.4;
-            color: #333;
-            background-color: var(--bg-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        /* Footer Banner with Image */
-        .footer-banner {
-            position: relative;
-            padding: 40px 20px;
-            text-align: center;
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-        }
-
-        .footer-banner h2 {
-            font-family: 'Pinyon Script', cursive;
-            font-size: 2.8rem;
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            color: var(--dark-pink);
         }
 
-        .light-btn {
-            background-color: #ffffff;
-            color: var(--text-color);
-            border: none;
+        .payment-box p {
+            font-size: 0.85rem;
+            color: var(--gray-text);
+            margin-bottom: 10px;
         }
 
-        .light-btn:hover {
-            background-color: var(--pink-light);
-        }
-
-        /* Bottom Legal / Copyright */
-        .footer-copy {
-            background-color: var(--pink-accent);
-            color: var(--text-color);
+        /* Footer */
+        footer {
             text-align: center;
-            padding: 15px;
-            font-size: 0.7rem;
-            border-top: 1px solid var(--text-color);
+            padding: 40px 20px;
+            font-size: 0.75rem;
+            color: var(--gray-text);
+            background: #ffffff;
+        }
+
+        footer .socials {
+            margin-bottom: 15px;
+        }
+
+        footer .socials a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        footer .socials a:hover {
+            color: var(--dark-pink);
         }
     </style>
 </head>
 <body>
 
-    <div class="page-wrapper">
-        
-        <!-- Brand Header -->
-        <header class="brand-header">
-            <a href="#" class="brand-logo">Tips & Bling</a>
-        </header>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-logo">Tips & Bling</a>
+        <div class="nav-links">
+            <a href="#catalog">Collection</a>
+            <a href="#order">How to Order</a>
+            <a href="#payment">Payment</a>
+        </div>
+    </nav>
 
-        <!-- Navigation Links Bar -->
-        <nav class="nav-links">
-            <a href="#shop">Shop</a>
-            <a href="#nails">Press-on Nails</a>
-            <a href="#jewelry">Jewelry</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Hero Banner -->
+    <section class="hero">
+        <span class="tag">Luxury Press-On Nails & Jewelry</span>
+        <h1>Elegance,<br><em>pressed on.</em></h1>
+        <p>Salon-quality reusable press-on nail sets and curated statement jewelry pieces designed to elevate your everyday look.</p>
+        <a href="#catalog" class="btn">Shop Collection</a>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-img-box">
-                <!-- Replace with your actual product image URL -->
-                <img src="https://images.unsplash.com/photo-1632345031435-8727f6c97d34?auto=format&fit=crop&w=600&q=80" alt="Press on nails and rings">
-            </div>
-            <div class="hero-content">
-                <h1>It's Time to <span class="script-word">Elevate</span> Your Style...</h1>
-                <p>High-quality, reusable press-on nails and curated jewelry designed to elevate your look instantly.</p>
-                <a href="https://instagram.com" target="_blank" class="cta-btn">Shop New Arrivals →</a>
-            </div>
-        </section>
-
-        <!-- Pink Accent Banner -->
-        <div class="pink-banner">
-            ✨ Worldwide Shipping &nbsp;|&nbsp; Free Over $75 ✨
+    <!-- Catalog Section -->
+    <div class="container" id="catalog">
+        <div class="section-header">
+            <h2>The Catalog</h2>
+            <p>Hand-finished sets designed to be worn again and again.</p>
         </div>
 
-        <!-- Shop Categories -->
-        <section class="categories-section" id="shop">
-            <h2 class="section-title">Shop Categories</h2>
-            
-            <div class="cat-grid">
-                <a href="https://instagram.com" target="_blank" class="cat-card">
-                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Press on Nails">
-                    <span>Press-on Nails</span>
-                </a>
-
-                <a href="https://instagram.com" target="_blank" class="cat-card">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" alt="Jewelry">
-                    <span>Jewelry Collection</span>
-                </a>
-
-                <a href="https://instagram.com" target="_blank" class="cat-card">
-                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Best Sellers">
-                    <span>Best Sellers</span>
-                </a>
+        <div class="catalog-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Cat-Eye Press-On Nails" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Cat-Eye Shimmer Set</h3>
+                        <div class="price">Rs. 1,500</div>
+                        <p>Magnetic cat-eye finish with custom sizing options. Includes prep kit & glue.</p>
+                    </div>
+                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Set</a>
+                </div>
             </div>
-        </section>
 
-        <!-- Quote Section -->
-        <div class="quote-section">
-            Effortless Application. Durable Wear. Curated Designs.
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80" alt="Velvet Burgundy Nails" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Velvet Burgundy Collection</h3>
+                        <div class="price">Rs. 1,650</div>
+                        <p>Deep burgundy velvet texture tailored for high-end elegance.</p>
+                    </div>
+                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Set</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80" alt="Zircon Jewelry Set" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Zircon Ring & Chain Stack</h3>
+                        <div class="price">Rs. 1,200</div>
+                        <p>Tarnish-resistant statement gold rings and layered chain necklaces.</p>
+                    </div>
+                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Item</a>
+                </div>
+            </div>
         </div>
-
-        <!-- Footer Call-to-Action Banner -->
-        <div class="footer-banner" id="contact">
-            <h2>#Tipsandbling</h2>
-            <a href="https://instagram.com" target="_blank" class="cta-btn light-btn">Follow Our Journey</a>
-        </div>
-
-        <!-- Copyright Footer -->
-        <footer class="footer-copy">
-            &copy; 2026 Tips & Bling. All rights reserved.
-        </footer>
-
     </div>
+
+    <!-- How to Order Section -->
+    <section class="order-section" id="order">
+        <div class="section-header">
+            <span>Simple & Personal</span>
+            <h2>How to order</h2>
+            <p>Follow these quick steps to secure your custom set.</p>
+        </div>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <span>01</span>
+                <h4>Choose your set</h4>
+                <p>Browse our catalog and screenshot your favorite design.</p>
+            </div>
+            <div class="step-card">
+                <span>02</span>
+                <h4>Send details</h4>
+                <p>Message us on Instagram or WhatsApp with your screenshot and nail measurements.</p>
+            </div>
+            <div class="step-card">
+                <span>03</span>
+                <h4>Advance payment</h4>
+                <p>Clear your payment via Nayapay or Easypaisa to confirm your order.</p>
+            </div>
+        </div>
+
+        <!-- Payment Details Box -->
+        <div class="payment-box" id="payment">
+            <h3>💳 Advance Payment Details</h3>
+            <p><strong>Easypaisa / Nayapay:</strong> 0330-1546789 (Account Title: Tips & Bling)</p>
+    
+            <p style="margin-top: 15px; font-size: 0.75rem; color: var(--dark-pink);">*After paying, please send a screenshot of your receipt via Instagram DM to finalize your dispatch.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="socials">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://wa.me/923001234567" target="_blank">WhatsApp</a>
+        </div>
+        <div>© 2026 Tips & Bling. All rights reserved. Elegant designs curated for you.</div>
+    </footer>
 
 </body>
 </html>
