@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Links</title>
-    <!-- Google Fonts & FontAwesome for Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Tips & Bling | Press-on Nails & Jewelry</title>
+    <!-- Google Fonts for Editorial Serif and Script Vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --bg-color: #f7f5f0;
+            --text-color: #1a1a1a;
+            --pink-accent: #f2a9be;
+            --pink-light: #fbe6ec;
+            --border-color: #dcd7cd;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -16,195 +23,328 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #2d3748;
-            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
 
-        .container {
+        .page-wrapper {
             width: 100%;
             max-width: 480px;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
-            padding: 40px 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Brand Header */
+        .brand-header {
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 24px 20px 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #ffffff;
         }
 
-        /* Profile Section */
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 16px;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        .brand-logo {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2.5rem;
+            color: #d17b96;
+            text-decoration: none;
         }
 
-        h1 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: #1a202c;
-        }
-
-        p.bio {
-            font-size: 0.9rem;
-            color: #718096;
-            margin-bottom: 24px;
-            padding: 0 10px;
-        }
-
-        /* Social Icons */
-        .social-icons {
+        /* Navigation Links Bar */
+        .nav-links {
             display: flex;
             justify-content: center;
             gap: 16px;
-            margin-bottom: 28px;
+            padding: 10px 15px;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #4a5568;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: all 0.2s ease;
+        .nav-links a {
+            color: var(--text-color);
             text-decoration: none;
+            transition: color 0.2s;
         }
 
-        .social-icons a:hover {
-            transform: translateY(-3px);
-            background: #1a202c;
-            color: #fff;
+        .nav-links a:hover {
+            color: #d17b96;
         }
 
-        /* Links Section */
-        .links-list {
+        /* Hero Section */
+        .hero {
+            padding: 30px 20px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
-        }
-
-        .link-btn {
-            display: flex;
+            gap: 24px;
             align-items: center;
-            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-img-box {
+            width: 100%;
+            border: 1px solid var(--text-color);
+            padding: 8px;
             background: #ffffff;
-            color: #2d3748;
-            padding: 14px 20px;
-            border-radius: 14px;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+
+        .hero-content h1 span.script-word {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2.8rem;
+            color: #d17b96;
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--pink-accent);
+            color: var(--text-color);
+            padding: 12px 28px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            transition: all 0.25s ease;
-            border: 1px solid rgba(0,0,0,0.02);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--text-color);
+            transition: all 0.3s ease;
         }
 
-        .link-btn i.left-icon {
-            font-size: 1.1rem;
-            margin-right: 12px;
-            color: #4a5568;
-        }
-
-        .link-btn .label {
-            flex-grow: 1;
-            text-align: left;
-        }
-
-        .link-btn i.right-arrow {
-            font-size: 0.8rem;
-            color: #cbd5e0;
-            transition: transform 0.2s ease;
-        }
-
-        .link-btn:hover {
+        .cta-btn:hover {
+            background-color: #e591ab;
             transform: translateY(-2px);
-            background: #1a202c;
-            color: #ffffff;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .link-btn:hover i.left-icon,
-        .link-btn:hover i.right-arrow {
-            color: #ffffff;
-        }
-
-        .link-btn:hover i.right-arrow {
-            transform: translateX(3px);
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: 30px;
+        /* Marquee Banner */
+        .pink-banner {
+            background-color: var(--pink-accent);
+            color: var(--text-color);
+            padding: 10px 15px;
+            text-align: center;
             font-size: 0.75rem;
-            color: #a0aec0;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-top: 1px solid var(--text-color);
+            border-bottom: 1px solid var(--text-color);
+        }
+
+        /* Categories Section */
+        .categories-section {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .cat-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cat-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            transition: transform 0.2s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--text-color);
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .cat-card span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        /* Sub-heading Quote */
+        .quote-section {
+            padding: 25px 20px;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.4;
+            color: #333;
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Footer Banner with Image */
+        .footer-banner {
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+
+        .footer-banner h2 {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .light-btn {
+            background-color: #ffffff;
+            color: var(--text-color);
+            border: none;
+        }
+
+        .light-btn:hover {
+            background-color: var(--pink-light);
+        }
+
+        /* Bottom Legal / Copyright */
+        .footer-copy {
+            background-color: var(--pink-accent);
+            color: var(--text-color);
+            text-align: center;
+            padding: 15px;
+            font-size: 0.7rem;
+            border-top: 1px solid var(--text-color);
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Profile Picture -->
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Profile Picture" class="profile-img">
+    <div class="page-wrapper">
         
-        <!-- Name and Bio -->
-        <h1>Tips&Bling</h1>
-        <p class="bio">Creating digital content, brand building, and sharing my favorite tools & finds! ✨</p>
+        <!-- Brand Header -->
+        <header class="brand-header">
+            <a href="#" class="brand-logo">Tips & Bling</a>
+        </header>
 
-        <!-- Social Media Quick Links -->
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://etsy.com" target="_blank" aria-label="Etsy"><i class="fas fa-store"></i></a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <!-- Navigation Links Bar -->
+        <nav class="nav-links">
+            <a href="#shop">Shop</a>
+            <a href="#nails">Press-on Nails</a>
+            <a href="#jewelry">Jewelry</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-img-box">
+                <!-- Replace with your actual product image URL -->
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6c97d34?auto=format&fit=crop&w=600&q=80" alt="Press on nails and rings">
+            </div>
+            <div class="hero-content">
+                <h1>It's Time to <span class="script-word">Elevate</span> Your Style...</h1>
+                <p>High-quality, reusable press-on nails and curated jewelry designed to elevate your look instantly.</p>
+                <a href="https://instagram.com" target="_blank" class="cta-btn">Shop New Arrivals →</a>
+            </div>
+        </section>
+
+        <!-- Pink Accent Banner -->
+        <div class="pink-banner">
+            ✨ Worldwide Shipping &nbsp;|&nbsp; Free Over $75 ✨
         </div>
 
-        <!-- Main Links List -->
-        <div class="links-list">
-            <a href="https://yourwebsite.com" class="link-btn" target="_blank">
-                <i class="fas fa-globe left-icon"></i>
-                <span class="label">Visit My Main Website</span>
-                <i class="fas fa-chevron-right right-arrow"></i>
-            </a>
+        <!-- Shop Categories -->
+        <section class="categories-section" id="shop">
+            <h2 class="section-title">Shop Categories</h2>
+            
+            <div class="cat-grid">
+                <a href="https://instagram.com" target="_blank" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Press on Nails">
+                    <span>Press-on Nails</span>
+                </a>
 
-            <a href="https://instagram.com" class="link-btn" target="_blank">
-                <i class="fab fa-instagram left-icon"></i>
-                <span class="label">Latest Instagram Reel</span>
-                <i class="fas fa-chevron-right right-arrow"></i>
-            </a>
+                <a href="https://instagram.com" target="_blank" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=500&q=80" alt="Jewelry">
+                    <span>Jewelry Collection</span>
+                </a>
 
-            <a href="https://etsy.com" class="link-btn" target="_blank">
-                <i class="fas fa-shopping-bag left-icon"></i>
-                <span class="label">Shop My Collection</span>
-                <i class="fas fa-chevron-right right-arrow"></i>
-            </a>
+                <a href="https://instagram.com" target="_blank" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80" alt="Best Sellers">
+                    <span>Best Sellers</span>
+                </a>
+            </div>
+        </section>
 
-            <a href="mailto:your-email@example.com" class="link-btn">
-                <i class="fas fa-envelope left-icon"></i>
-                <span class="label">Get in Touch (Email)</span>
-                <i class="fas fa-chevron-right right-arrow"></i>
-            </a>
+        <!-- Quote Section -->
+        <div class="quote-section">
+            Effortless Application. Durable Wear. Curated Designs.
         </div>
 
-        <!-- Optional Footer -->
-        <div class="footer">
-            &copy; 2026 Your Name
+        <!-- Footer Call-to-Action Banner -->
+        <div class="footer-banner" id="contact">
+            <h2>#Tipsandbling</h2>
+            <a href="https://instagram.com" target="_blank" class="cta-btn light-btn">Follow Our Journey</a>
         </div>
+
+        <!-- Copyright Footer -->
+        <footer class="footer-copy">
+            &copy; 2026 Tips & Bling. All rights reserved.
+        </footer>
+
     </div>
 
 </body>
