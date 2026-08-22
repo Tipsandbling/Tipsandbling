@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links</title>
+    <!-- Google Fonts & FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3748;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Profile Section */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #1a202c;
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 24px;
+            padding: 0 10px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5568;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            background: #1a202c;
+            color: #fff;
+        }
+
+        /* Links Section */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            color: #2d3748;
+            padding: 14px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .link-btn i.left-icon {
+            font-size: 1.1rem;
+            margin-right: 12px;
+            color: #4a5568;
+        }
+
+        .link-btn .label {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .link-btn i.right-arrow {
+            font-size: 0.8rem;
+            color: #cbd5e0;
+            transition: transform 0.2s ease;
+        }
+
+        .link-btn:hover {
+            transform: translateY(-2px);
+            background: #1a202c;
+            color: #ffffff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-btn:hover i.left-icon,
+        .link-btn:hover i.right-arrow {
+            color: #ffffff;
+        }
+
+        .link-btn:hover i.right-arrow {
+            transform: translateX(3px);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Picture -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Profile Picture" class="profile-img">
+        
+        <!-- Name and Bio -->
+        <h1>Tips&Bling</h1>
+        <p class="bio">Creating digital content, brand building, and sharing my favorite tools & finds! ✨</p>
+
+        <!-- Social Media Quick Links -->
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://etsy.com" target="_blank" aria-label="Etsy"><i class="fas fa-store"></i></a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+
+        <!-- Main Links List -->
+        <div class="links-list">
+            <a href="https://yourwebsite.com" class="link-btn" target="_blank">
+                <i class="fas fa-globe left-icon"></i>
+                <span class="label">Visit My Main Website</span>
+                <i class="fas fa-chevron-right right-arrow"></i>
+            </a>
+
+            <a href="https://instagram.com" class="link-btn" target="_blank">
+                <i class="fab fa-instagram left-icon"></i>
+                <span class="label">Latest Instagram Reel</span>
+                <i class="fas fa-chevron-right right-arrow"></i>
+            </a>
+
+            <a href="https://etsy.com" class="link-btn" target="_blank">
+                <i class="fas fa-shopping-bag left-icon"></i>
+                <span class="label">Shop My Collection</span>
+                <i class="fas fa-chevron-right right-arrow"></i>
+            </a>
+
+            <a href="mailto:your-email@example.com" class="link-btn">
+                <i class="fas fa-envelope left-icon"></i>
+                <span class="label">Get in Touch (Email)</span>
+                <i class="fas fa-chevron-right right-arrow"></i>
+            </a>
+        </div>
+
+        <!-- Optional Footer -->
+        <div class="footer">
+            &copy; 2026 Your Name
+        </div>
+    </div>
+
+</body>
+</html>
