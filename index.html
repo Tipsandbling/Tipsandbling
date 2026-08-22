@@ -30,7 +30,6 @@
             line-height: 1.6;
         }
 
-        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: space-between;
@@ -69,7 +68,6 @@
             color: var(--dark-pink);
         }
 
-        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -125,13 +123,13 @@
             transition: background 0.2s;
             border: none;
             cursor: pointer;
+            text-align: center;
         }
 
         .btn:hover {
             background-color: var(--dark-pink);
         }
 
-        /* Catalog Section */
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -156,7 +154,7 @@
 
         .catalog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -176,7 +174,7 @@
 
         .product-img {
             width: 100%;
-            height: 320px;
+            height: 300px;
             object-fit: cover;
         }
 
@@ -207,7 +205,6 @@
             margin-bottom: 15px;
         }
 
-        /* How to Order Section */
         .order-section {
             background-color: var(--soft-pink);
             padding: 60px 20px;
@@ -249,7 +246,6 @@
             color: var(--gray-text);
         }
 
-        /* Payment Section */
         .payment-box {
             max-width: 600px;
             margin: 40px auto 0;
@@ -273,7 +269,6 @@
             margin-bottom: 10px;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -300,7 +295,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav>
         <a href="#" class="nav-logo">Tips & Bling</a>
         <div class="nav-links">
@@ -310,15 +304,13 @@
         </div>
     </nav>
 
-    <!-- Hero Banner -->
     <section class="hero">
         <span class="tag">Luxury Press-On Nails & Jewelry</span>
         <h1>Elegance,<br><em>pressed on.</em></h1>
-        <p>Salon-quality reusable press-on nail sets and curated statement jewelry pieces designed to elevate your everyday look.</p>
+        <p>Salon-quality reusable press-on nail sets designed to elevate your everyday look.</p>
         <a href="#catalog" class="btn">Shop Collection</a>
     </section>
 
-    <!-- Catalog Section -->
     <div class="container" id="catalog">
         <div class="section-header">
             <h2>The Catalog</h2>
@@ -328,49 +320,84 @@
         <div class="catalog-grid">
             <!-- Product 1 -->
             <div class="product-card">
-                <img src="https://ibb.co/m5W97Kh0
-
-">
+                <img src="https://i.ibb.co/m5W97Kh0/image.png" alt="Press-on Nail Set" class="product-img">
                 <div class="product-details">
                     <div>
-                        <h3>Cat-Eye Shimmer Set</h3>
-                        <div class="price">Rs. 680</div>
-                        <p>Magnetic cat-eye finish with custom sizing options. Includes prep kit & glue.</p>
+                        <h3>Signature Press-On Set 1</h3>
+                        <div class="price">Rs. 1,500</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
                     </div>
-                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Set</a>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
                 </div>
             </div>
 
             <!-- Product 2 -->
             <div class="product-card">
-
+                <img src="https://i.ibb.co/rRpyxR8J/image.png" alt="Press-on Nail Set" class="product-img">
                 <div class="product-details">
                     <div>
-                        <h3>Velvet Burgundy Collection</h3>
-                        <div class="price">Rs. 1,650</div>
-                        <p>Deep burgundy velvet texture tailored for high-end elegance.</p>
+                        <h3>Signature Press-On Set 2</h3>
+                        <div class="price">Rs. 1,500</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
                     </div>
-                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Set</a>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
                 </div>
             </div>
 
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://ibb.co/rRpyxR8J"
->
+                <img src="https://i.ibb.co/HDJXCyW1/image.png" alt="Press-on Nail Set" class="product-img">
                 <div class="product-details">
                     <div>
-                        <h3>Zircon Ring & Chain Stack</h3>
-                        <div class="price">Rs.700</div>
-                        <p>Tarnish-resistant statement gold rings and layered chain necklaces.</p>
+                        <h3>Signature Press-On Set 3</h3>
+                        <div class="price">Rs. 1,600</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
                     </div>
-                    <a href="#order" class="btn" style="text-align: center; padding: 10px;">Order This Item</a>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/FLx9HFPt/image.png" alt="Press-on Nail Set" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Signature Press-On Set 4</h3>
+                        <div class="price">Rs. 1,600</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
+                    </div>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/HfQmYbxv/image.png" alt="Press-on Nail Set" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Signature Press-On Set 5</h3>
+                        <div class="price">Rs. 1,500</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
+                    </div>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://i.ibb.co/gF9zW4db/image.png" alt="Press-on Nail Set" class="product-img">
+                <div class="product-details">
+                    <div>
+                        <h3>Signature Press-On Set 6</h3>
+                        <div class="price">Rs. 1,700</div>
+                        <p>Custom sizing available. Includes prep kit, glue, and buffer.</p>
+                    </div>
+                    <a href="#order" class="btn" style="padding: 10px;">Order This Set</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- How to Order Section -->
     <section class="order-section" id="order">
         <div class="section-header">
             <span>Simple & Personal</span>
@@ -392,20 +419,18 @@
             <div class="step-card">
                 <span>03</span>
                 <h4>Advance payment</h4>
-                <p>Clear your payment via Nayapay or Easypaisa to confirm your order.</p>
+                <p>Clear your payment via Bank Transfer or Easypaisa to confirm your order.</p>
             </div>
         </div>
 
-        <!-- Payment Details Box -->
         <div class="payment-box" id="payment">
             <h3>💳 Advance Payment Details</h3>
-            <p><strong>Easypaisa / Nayapay:</strong> 0330-1546789 (Account Title: Tips & Bling)</p>
-    
-            <p style="margin-top: 15px; font-size: 0.75rem; color: var(--dark-pink);">*After paying, please send a screenshot of your receipt via Instagram DM to finalize your dispatch.</p>
+            <p><strong>Easypaisa / JazzCash:</strong> 0300-1234567 (Account Title: Tips & Bling)</p>
+            <p><strong>Bank Transfer:</strong> Meezan Bank / HBL — Account: 0123-4567890123</p>
+            <p style="margin-top: 15px; font-size: 0.75rem; color: var(--dark-pink);">*After paying, please send a screenshot of your receipt via Instagram DM or WhatsApp to finalize your dispatch.</p>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="socials">
             <a href="https://instagram.com" target="_blank">Instagram</a>
